@@ -4,15 +4,17 @@ import { Home } from '../pages/Home';
 import { About } from '../pages/About';
 import { Careers } from '../pages/Careers';
 import { Locations } from '../pages/Locations';
+import { Navigation } from '../Navigation/Navigation';
 
 function App() {
 	return (
 		<Router>
+			<Navigation />
 			<Switch>
 				<Route exact path="/">
 					<Home />
 				</Route>
-				<Route path="/abote">
+				<Route path="/about">
 					<About />
 				</Route>
 				<Route path="/careers">
