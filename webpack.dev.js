@@ -1,11 +1,36 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
+	devtool: 'source-map',
 	entry: {
 		index: './src/assets/js/index.js',
-		index: './src/assets/js/about.js',
-		index: './src/assets/js/careers.js',
-		index: './src/assets/js/locations.js',
+		// index: './src/assets/js/about.js',
+		// index: './src/assets/js/careers.js',
+		// index: './src/assets/js/locations.js',
+	},
+	output: {
+		filename: '[name].[hash:20].js',
+		path: buildPath,
+	},
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader',
+				options: {
+					presets: ['@babel/preset-env'],
+				},
+			},
+			{
+				test: /\.css$/i,
+				include: path.resolve(__dirname, 'src'),
+				use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+			},
+		],
 	},
 	devServer: {
 		port: 8080,
@@ -38,6 +63,10 @@ module.exports = {
 			inject: true,
 			chunks: ['index'],
 			filename: 'locations.html',
+		}),
+		new MiniCssExtractPlugin({
+			filename: '[name].[contenthash].css',
+			chunkFilename: '[id].[contenthash].css',
 		}),
 	],
 };
