@@ -2,5 +2,6 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <%= require('html-loader!./partials/navigation.html').default %>
     <h1>Hello from home page</h1>
 <%= require('html-loader!./partials/footer.html').default %>
