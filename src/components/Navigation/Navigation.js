@@ -1,3 +1,4 @@
+import './Navigation.scss';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
@@ -9,19 +10,32 @@ export const Navigation = () => {
 
 	return (
 		<nav className="navigation">
-			<img
-				src={isOpen ? closeIcon : hamburgerIcon}
-				alt="navigation triger button"
-				onClick={() => setIsOpen(!isOpen)}
-			/>
-			<Link to="/">
-				<img className="navigation__logo" src={logo} alt="logo" />
-			</Link>
-			<div className="navigation__links">
-				<Link to="/about">About</Link>
-				<Link to="/careers">Careers</Link>
-				<Link to="/locations">Locations</Link>
-				<button className="btn btn--primary">Get Scootin</button>
+			<div className="navigation__container">
+				<img
+					className="navigation__icon"
+					src={isOpen ? closeIcon : hamburgerIcon}
+					alt="navigation triger button"
+					onClick={() => setIsOpen(!isOpen)}
+				/>
+				<Link className="navigation__logo" to="/">
+					<img src={logo} alt="logo" />
+				</Link>
+				<div
+					className={isOpen ? 'navigation__links' : 'navigation__links--closed'}
+				>
+					<div className="navigation__links-container">
+						<Link className="navigation__link" to="/about">
+							About
+						</Link>
+						<Link className="navigation__link" to="/careers">
+							Careers
+						</Link>
+						<Link className="navigation__link" to="/locations">
+							Locations
+						</Link>
+					</div>
+					<button className="btn btn--primary">Get Scootin</button>
+				</div>
 			</div>
 		</nav>
 	);
