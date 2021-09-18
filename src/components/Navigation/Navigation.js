@@ -21,6 +21,11 @@ export const Navigation = () => {
 					<img src={logo} alt="logo" />
 				</Link>
 				<div
+					className={
+						isOpen ? 'navigation__background' : 'navigation__background--closed'
+					}
+				></div>
+				<div
 					className={isOpen ? 'navigation__links' : 'navigation__links--closed'}
 				>
 					<div className="navigation__links-container">
