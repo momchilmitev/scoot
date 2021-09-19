@@ -1,0 +1,44 @@
+.home-header {
+	position: relative;
+	height: calc(100vh - 65px);
+	background: url('../../assets/images/home-hero-mobile.jpg');
+
+	&__container {
+		width: 80%;
+		margin: 0 auto;
+		padding-top: 115px;
+		text-align: center;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: 24px;
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 40px;
+		text-align: center;
+		letter-spacing: -1.78571px;
+		color: #ffffff;
+	}
+
+	&__content {
+		margin-bottom: 34px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 25px;
+		text-align: center;
+		color: #ffffff;
+	}
+}
+
+.line,
+.white-circles {
+	display: none;
+}
+
+.right-arrow {
+	position: absolute;
+	bottom: 34px;
+	right: 240px;
+}
