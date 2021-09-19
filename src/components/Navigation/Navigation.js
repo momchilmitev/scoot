@@ -14,7 +14,7 @@ export const Navigation = () => {
 				<img
 					className="navigation__icon"
 					src={isOpen ? closeIcon : hamburgerIcon}
-					alt="navigation triger button"
+					alt="navigation trigger button"
 					onClick={() => setIsOpen(!isOpen)}
 				/>
 				<Link className="navigation__logo" to="/">
