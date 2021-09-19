@@ -29,13 +29,25 @@ export const Navigation = () => {
 					className={isOpen ? 'navigation__links' : 'navigation__links--closed'}
 				>
 					<div className="navigation__links-container">
-						<Link className="navigation__link" to="/about">
+						<Link
+							className="navigation__link"
+							to="/about"
+							onClick={() => setIsOpen(false)}
+						>
 							About
 						</Link>
-						<Link className="navigation__link" to="/careers">
+						<Link
+							className="navigation__link"
+							to="/careers"
+							onClick={() => setIsOpen(false)}
+						>
 							Careers
 						</Link>
-						<Link className="navigation__link" to="/locations">
+						<Link
+							className="navigation__link"
+							to="/locations"
+							onClick={() => setIsOpen(false)}
+						>
 							Locations
 						</Link>
 					</div>
