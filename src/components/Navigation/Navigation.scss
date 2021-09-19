@@ -16,7 +16,6 @@
 	&__links-container {
 		display: flex;
 		flex-direction: column;
-		
 	}
 
 	&__background {
@@ -26,7 +25,8 @@
 		width: 100%;
 		height: calc(100vh - 65px);
 		background-color: black;
-		opacity: .75;
+		opacity: 0.75;
+		z-index: 1;
 
 		&--closed {
 			display: none;
@@ -45,11 +45,11 @@
 		justify-content: space-between;
 		padding: 64px 32px 24px;
 		background-color: #495567;
+		z-index: 1;
 
 		&--closed {
 			display: none;
 		}
-
 	}
 
 	&__link {
