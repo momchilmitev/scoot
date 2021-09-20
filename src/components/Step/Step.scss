@@ -1,0 +1,29 @@
+.step {
+	text-align: center;
+
+	&:not(:last-child) {
+		margin-bottom: 48px;
+	}
+
+	&__icon {
+		margin-bottom: 24px;
+	}
+
+	&__title {
+		margin-bottom: 24px;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: -0.892857px;
+		color: #495567;
+	}
+
+	&__description {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 25px;
+		color: #939caa;
+	}
+}

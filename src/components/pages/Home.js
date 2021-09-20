@@ -1,3 +1,4 @@
+import './Home.scss';
 import HomeHeader from '../HomeHeader/HomeHeader';
 import Step from '../Step/Step';
 
@@ -30,9 +31,9 @@ export const Home = () => {
 	return (
 		<>
 			<HomeHeader />
-			<main>
-				<div className="main__container">
-					<section className="steps">
+			<main className="homepage__main">
+				<div className="homepage__main-container">
+					<section className="homepage__steps">
 						{steps.map((step) => (
 							<Step
 								icon={step.icon}
@@ -41,7 +42,7 @@ export const Home = () => {
 							/>
 						))}
 					</section>
-					<section className="details"></section>
+					<section className="homepage__details"></section>
 				</div>
 			</main>
 		</>
